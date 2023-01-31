@@ -1,0 +1,163 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header{
+  /* width: 100vw; */
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1cm;
+  font-family: sans-serif;
+  font-weight: 600;
+  color:rgb(0, 0, 0);
+  font-size: 25px;
+  background-color: yellow;
+}
+footer{
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+}
+.notes_div{
+  height: 100vh;
+
+}
+.main_note{
+  width: 25vw;
+  margin: 0 auto;
+  height: 25vh;
+  box-shadow: 0px 0px 5px 0px rgba(110,110,110,0.75);
+  border-radius: 8px;
+}
+.main_note form{
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+  height: 100%;
+}
+form input[type="text"]{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid lightgrey;
+  padding: 5px 10px;
+  height: 40px;
+  line-height: 40px;
+}
+form textarea{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid lightgrey;
+  padding: 5px 10px;
+  height: 100%;
+  overflow-y: scroll;
+}
+.plus_sign{
+  position: relative;
+  right: -94%;
+  bottom: -16px;
+  width: max-content;
+  padding: 6px 13px;
+  border-radius: 50%;
+  font-size: 18px;
+  background: yellow;
+  color: #000;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.plus_sign:hover{
+  background-color: rgb(255, 252, 83);
+}
+.notes{
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.notes .note{
+  width: 23%;
+  box-shadow: 0px 0px 5px 0px rgba(110,110,110,0.75);
+  height: 25vh;
+  margin: 20px 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s all ease;
+}
+.notes .note:hover{
+  transform: translateY(-5px);
+}
+.notes .note h1{
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  height: 7vh;
+  /* width: 90%; */
+  line-height: 7vh;
+}
+.notes .note p{
+  /* width: 90%; */
+  padding: 10px 0px;
+  height: 14vh;
+  margin-bottom: 5px;
+  font-size: 15px;
+  border-bottom: 1px solid lightgrey;
+  overflow-y: scroll;
+}
+.notes .delete_icon{
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 0px rgba(110,110,110,0.75);
+  background-color: rgba(214, 208, 208, 0.349);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.notes .delete_icon:hover{
+  background-color: red;
+  color: #fff;
+}
+textarea::-webkit-scrollbar, .note p::-webkit-scrollbar {
+  width: 2px;
+}
+ 
+textarea::-webkit-scrollbar-track, .note p::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+ 
+textarea::-webkit-scrollbar-thumb, .note p::-webkit-scrollbar-thumb{
+  background-color: rgb(255, 255, 255);
+  outline: 1px solid rgb(255, 255, 255);
+}
+@media screen and (max-width: 850px) {
+  .main_note{
+    width: 50vw;
+  }
+  .notes{
+    justify-content: center;
+  }
+  .notes .note{
+    width: 40%;
+  }
+}
